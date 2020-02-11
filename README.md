@@ -6,7 +6,7 @@ A small python module for populating json template files.
 
 Accepts either a json string or a file path and a dictionary. json-template replaces the place holders found in the json with those found in the dictionary.
 
-Below is an template example
+Below is a template example
 
 ```json
 {
