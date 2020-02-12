@@ -10,10 +10,10 @@ Below is a template example
 
 ```json
 {
-                "key":"hard coded value",
-                "key2":1,
-                "key3":"{{ variable }}",
-                "key4":"{% array %}"
+  "key":"hard coded value",
+  "key2":1,
+  "key3":"{{ variable }}",
+  "key4":"{% array %}"
 }
 ```
 
@@ -31,9 +31,9 @@ The JSON would become
 
 ```json
 {
-                "key":"hard coded value",
-                "key2":1,
-                "key3":"hello world",
-                "key4":["foo","bar"]
+  "key":"hard coded value",
+  "key2":1,
+  "key3":"hello world",
+  "key4":["foo","bar"]
 }
 ```
