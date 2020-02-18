@@ -37,6 +37,10 @@ The JSON would become
   "key4":["foo","bar"]
 }
 ```
+### Installing
+
+This module can be installed via [pypi](https://pypi.org/project/jsontemplates/0.1.0/) using `pip install jsontemplates`
+
 ### Usage
 
 ```python
