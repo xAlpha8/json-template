@@ -12,7 +12,7 @@ class JsonTemplates:
   self.__var_regex = re.compile("\{\{\ [a-zA-Z0-9_]+\ \}\}")
   self.__arr_regex = re.compile("\{\%\ [a-zA-Z0-9_]+\ \%\}")
   self.__cln_regex = re.compile("[a-zA-Z0-9_]+")
-  self.__version__ = "0.1.0"
+  self.__version__ = "0.1.1"
 
 #-----------------------------------------------------------------------
  def is_dict(self,obj):
