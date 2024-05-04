@@ -7,8 +7,8 @@ import collections.abc
 class JsonTemplates:
   def __init__(self): 
     self.__template = None
-    self.__var_regex = re.compile("\{\{\s[a-zA-Z0-9_]+\s\}\}")
-    self.__arr_regex = re.compile("\{\%\s[a-zA-Z0-9_]+\s\%\}")
+    self.__var_regex = re.compile("{\s[a-zA-Z0-9_]+\s}")
+    self.__arr_regex = re.compile("{\%\s[a-zA-Z0-9_]+\s\%}")
     self.__cln_regex = re.compile("[a-zA-Z0-9_]+")
     self.__version__ = "0.1.1"
 
