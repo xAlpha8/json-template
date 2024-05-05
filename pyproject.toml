@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "jsontemplates"
+version = "0.1.1"
+description = "A small python module for populating json template files."
+authors = ["Jon Keatley"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://gitlab.com/Jon.Keatley.Folio/json-templates"
+repository = "https://gitlab.com/Jon.Keatley.Folio/json-templates"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+packages = [
+    { include = "*" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+indent-width = 2
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
