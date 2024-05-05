@@ -7,9 +7,9 @@ import collections.abc
 class JsonTemplates:
   def __init__(self): 
     self.__template = None
-    self.__var_regex = re.compile("{\s[a-zA-Z0-9_]+\s}")
-    self.__arr_regex = re.compile("{\%\s[a-zA-Z0-9_]+\s\%}")
-    self.__cln_regex = re.compile("[a-zA-Z0-9_]+")
+    self.__var_regex = re.compile(r"{{\s[a-zA-Z0-9_]+\s}}")
+    self.__arr_regex = re.compile(r"{%\s[a-zA-Z0-9_]+\s%}")
+    self.__cln_regex = re.compile(r"[a-zA-Z0-9_]+")
     self.__version__ = "0.1.1"
 
   def is_dict(self,obj):
@@ -22,21 +22,21 @@ class JsonTemplates:
     except:
       return False
 
-  def clean_key(self,key):
+  def clean_key(self, key):
     mtch = self.__cln_regex.search(key)
     if mtch is None:
       return (False,"{} is not valid!".format(key))
     else:
       return (True,mtch.group(0))
 
-  def loads(self,json_str):
+  def loads(self, json_str):
     try:
       self.__template = json.loads(json_str)
     except Exception as ex:
       return (False, "Unable to parse json! {}".format(ex))
-    return (True,self.__template)
+    return (True, self.__template)
 
-  def load(self,json_path):
+  def load(self, json_path):
     if os.path.isfile(json_path) and json_path.lower().endswith("json"):
       try:
         with open(json_path) as json_in:
